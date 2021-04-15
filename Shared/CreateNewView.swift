@@ -17,6 +17,7 @@ struct CreateNewView: View {
                 Text("Trickle!")
                     .font(.system(size:44, weight: .bold))
             }
+            .foregroundColor(Color.white)
             
             
             VStack(spacing: 16) {
@@ -33,7 +34,7 @@ struct CreateNewView: View {
                 }
                 
                 .padding()
-                .background(Color.green)
+                .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                 .cornerRadius(10)
                 
                 
@@ -50,23 +51,28 @@ struct CreateNewView: View {
                     TextField("Leisure Task", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 }
                 .padding()
-                .background(Color.green)
+                .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                 .cornerRadius(10)
             }
             .frame(maxWidth: 330)
             .padding(.horizontal, 20)
             .padding(.vertical, 50)
-            .background(Color.blue)
+            .background(Color.green)
             .cornerRadius(30)
             
             
-          
+            
+            //Follow this link to add a dropdown
+            
+            //https://www.youtube.com/watch?v=CwD4cScGCq8
+            
         }
-        
-        
-        
+        .frame(maxWidth:.infinity, maxHeight: .infinity)
+        .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
+        .edgesIgnoringSafeArea(.all)
         
     }
+    
 }
 
 struct CreateNewView_Previews: PreviewProvider {
