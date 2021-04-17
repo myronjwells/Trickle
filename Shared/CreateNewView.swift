@@ -62,9 +62,9 @@ struct CreateNewView: View {
             
             
             
-            //Follow this link to add a dropdown
+            //Follow Mengs guide to add a Navigation Selection for Category and Siri
             
-            //https://www.youtube.com/watch?v=CwD4cScGCq8
+            //Lecture Vide # 17 and 18
             
         }
         .frame(maxWidth:.infinity, maxHeight: .infinity)
