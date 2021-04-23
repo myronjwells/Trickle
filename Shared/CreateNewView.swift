@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreateNewView: View {
+    @State var tapped: Bool = false
     var body: some View {
         
         VStack {
@@ -66,6 +67,13 @@ struct CreateNewView: View {
             
             //Lecture Vide # 17 and 18
             
+            Text("Test")
+                .onTapGesture {
+                    self.tapped.toggle()
+                }
+                .sheet(isPresented: $tapped, content: {
+                    Text("Yo")
+                })
         }
         .frame(maxWidth:.infinity, maxHeight: .infinity)
         .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
