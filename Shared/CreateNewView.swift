@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 struct CreateNewView: View {
     @State var tapped: Bool = false
     var body: some View {
         
-        VStack {
+        ScrollView {
             VStack {
                 Text("Let's create a new")
                     .font(.system(size:34, weight: .medium))
@@ -61,24 +62,31 @@ struct CreateNewView: View {
             .background(Color.green)
             .cornerRadius(30)
             
-            
-            
-            //Follow Mengs guide to add a Navigation Selection for Category and Siri
-            
-            //Lecture Vide # 17 and 18
-            
-            Text("Test")
+            HStack {
+                Circle()
+                    .strokeBorder(Color(#colorLiteral(red: 0.8980392157, green: 0.04705882353, blue: 0.662745098, alpha: 1)),lineWidth: 7)
+                    .background(Circle().foregroundColor(Color(.clear)))
+                    .frame(width: 25, height: 25)
+                TextField("Priority Task", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            }
+            .background(Color.purple)
                 .onTapGesture {
                     self.tapped.toggle()
                 }
-                .sheet(isPresented: $tapped, content: {
-                    Text("Yo")
-                })
+            //.animation(.spring())
+         
+          
+                
+            
+            
+            
         }
-        .frame(maxWidth:.infinity, maxHeight: .infinity)
         .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
         .edgesIgnoringSafeArea(.all)
-        
+        .bottomSheet(isPresented: self.$tapped.animation(.easeIn(duration:3)), height: 370, topBarHeight: 16, topBarCornerRadius: 16, topBarBackgroundColor: Color.pink, showTopIndicator: false) {
+            Text("Test")
+        }
+    
     }
     
 }
