@@ -33,6 +33,15 @@ struct CreateNewView: View {
                 .foregroundColor(Color.white)
                 
                 
+                TrickleNeumorphismStyleContainerView {
+                  
+                        Text("I'd like to trickle my time spent on ...")
+                            .font(.system(size:28, weight: .medium))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                       
+                }
+//
                 VStack(spacing: 20) {
                     Text("I'd like to trickle my time spent on ...")
                         .font(.system(size:28, weight: .medium))
@@ -111,9 +120,10 @@ struct CreateNewView: View {
                     VStack {
                         HStack {
                             Text("Difficulty")
+                                .font(Font.body.weight(.bold))
                             Image(systemName: "info.circle")
                         }
-                        .font(Font.body.weight(.bold))
+                        
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                         
                         HStack(spacing: 20) {
@@ -152,5 +162,29 @@ struct CreateNewView: View {
 struct CreateNewView_Previews: PreviewProvider {
     static var previews: some View {
         CreateNewView()
+    }
+}
+
+
+protocol ContainerView: View {
+    associatedtype Content
+    init(content: @escaping () -> Content)
+}
+
+struct TrickleNeumorphismStyleContainerView<Content: View>: ContainerView {
+    
+    var content: () -> Content
+    init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content
+    }
+    var body: some View {
+        VStack(spacing: 20, content: content)
+        //.frame(maxWidth:300)
+        .padding(.horizontal, 20)
+        .padding(.vertical, 50)
+        .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
+        .cornerRadius(30)
+        .shadow(color: Color(#colorLiteral(red: 0.262745098, green: 0.2862745098, blue: 0.831372549, alpha: 1)), radius: 10, x: 10, y: 10)
+        .shadow(color: Color(#colorLiteral(red: 0.2549019608, green: 0.2784313725, blue: 0.8431372549, alpha: 1)), radius: 10, x: -10, y: -10)
     }
 }
