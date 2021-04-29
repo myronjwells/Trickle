@@ -76,6 +76,8 @@ struct TrickleSymbol: View {
 }
 
 struct TrickleCardView: View {
+    
+    @State var progressValue: Float = 60 * 60 * 10 // 10 hours in seconds
     var body: some View {
         VStack {
             VStack {
@@ -118,36 +120,15 @@ struct TrickleCardView: View {
                             .font(.system(size: imageFrameSize/2))
                             .foregroundColor(Color.black.opacity(0.3))
                             .offset(y: -20)
-                        
-                        
-                        //                        Image(systemName: "bell")
-                        //                            .renderingMode(.original)
-                        //                            .font(.system(size: 16, weight: .medium))
-                        //                            .frame(width: 36, height: 36)
-                        //                            .background(Color.white)
-                        //                            .clipShape(Circle())
-                        //                            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-                        //                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
-                        //
                     }
                     
                     
                     
                     
                 }
-                Color(#colorLiteral(red: 0.007843137255, green: 0.7803921569, blue: 0.7803921569, alpha: 1))
-                    .frame(width: 180, height: 6)
-                    .cornerRadius(3)
-                    .frame(maxWidth: .infinity, alignment: .leading )
-                    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.08))
-                    .cornerRadius(3)
+                TrickleTimeStorageBar(showTimeLabel: false, value: progressValue).frame(height: 6)
                     .padding()
-                    
-                
-                //.padding(.horizontal)
-                //.frame(width: 150, height: 24)
-                //.background(Color.black.opacity(0.1))
-                //.cornerRadius(12)
+            
                 Text("Last Updated: Apr. 8, 2021")
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .font(Font.caption2)
@@ -194,5 +175,64 @@ struct HomeHeaderQuoteView: View {
         }
         .padding(25)
         
+    }
+}
+
+extension UIColor {
+
+    func lighter(by percentage: CGFloat = 30.0) -> UIColor? {
+        return self.adjust(by: abs(percentage) )
+    }
+
+    func darker(by percentage: CGFloat = 30.0) -> UIColor? {
+        return self.adjust(by: -1 * abs(percentage) )
+    }
+
+    func adjust(by percentage: CGFloat = 30.0) -> UIColor? {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        if self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
+            return UIColor(red: min(red + percentage/100, 1.0),
+                           green: min(green + percentage/100, 1.0),
+                           blue: min(blue + percentage/100, 1.0),
+                           alpha: alpha)
+        } else {
+            return nil
+        }
+    }
+}
+
+struct TrickleTimeStorageBar: View {
+    var value: Float
+    private var maxStorage: Float = 60 * 60 * 24 // 24 hours
+    var showTimeLabel: Bool = false
+    
+    init(showTimeLabel: Bool, value: Float) {
+        self.value = value
+        self.showTimeLabel = showTimeLabel
+    }
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
+                    .opacity(0.08)
+                    .foregroundColor(Color.black)
+                
+                
+                Rectangle().frame(width: min(CGFloat(self.value / maxStorage)*geometry.size.width, geometry.size.width), height: geometry.size.height)
+                    .foregroundColor(Color(UIColor(#colorLiteral(red: 0.007843137255, green: 0.7803921569, blue: 0.7803921569, alpha: 1))))
+                    .animation(.linear)
+                
+                if showTimeLabel {
+                HStack {
+                    Spacer()
+                    Text("10 hrs")
+                        .padding(.trailing, 10)
+                        .font(.system(size: geometry.size.height / 2, weight: .bold))
+                        .foregroundColor(Color(UIColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))))
+                }
+            }
+            }.cornerRadius(45.0)
+        }
     }
 }

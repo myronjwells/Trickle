@@ -11,6 +11,7 @@ import BottomSheet
 struct CreateNewView: View {
     @State var tapped: Bool = false
     @State var editMode: EditMode = .inactive
+    @State var progressValue: Float = 60 * 60 * 14 // 10 hours in seconds
     private var isCreate: Bool
     
     
@@ -39,6 +40,11 @@ struct CreateNewView: View {
                 } else {
                     TrickleModifierPageButton(title: self.editMode.isEditing ? .save : .edit) {
                         self.editMode.toggle()
+                    }
+                    
+                    TrickleNeumorphismStyleContainerView {
+                        TrickleTimeStorageBar(showTimeLabel: true, value: progressValue).frame(height: 30)
+                
                     }
                     
                 }
