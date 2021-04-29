@@ -3,27 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E45CFC8ED0D1691B2E6670B /* Pods_Trickle__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DCDEAD1B4B1A6C06731177 /* Pods_Trickle__iOS_.framework */; };
+		88097151CDEA2A323AD11620 /* Pods_Trickle__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */; };
 		A03BBD8A2627ABF500F72FB0 /* TrickleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBD772627ABF300F72FB0 /* TrickleApp.swift */; };
 		A03BBD8B2627ABF500F72FB0 /* TrickleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBD772627ABF300F72FB0 /* TrickleApp.swift */; };
-		A03BBD8C2627ABF500F72FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBD782627ABF300F72FB0 /* ContentView.swift */; };
-		A03BBD8D2627ABF500F72FB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBD782627ABF300F72FB0 /* ContentView.swift */; };
 		A03BBD8E2627ABF500F72FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BBD792627ABF500F72FB0 /* Assets.xcassets */; };
 		A03BBD8F2627ABF500F72FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BBD792627ABF500F72FB0 /* Assets.xcassets */; };
+		A03BBDA82627AD1E00F72FB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA62627AD1E00F72FB0 /* HomeView.swift */; };
+		A03BBDA92627AD1E00F72FB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA62627AD1E00F72FB0 /* HomeView.swift */; };
+		A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */; };
+		A03BBDAB2627AD1E00F72FB0 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */; };
+		A0C7B9762634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
+		A0C7B9772634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
+		A0C7B990263A122600E53F29 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7B98F263A122500E53F29 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Trickle (macOS)/Pods-Trickle (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (macOS).release.xcconfig"; path = "Target Support Files/Pods-Trickle (macOS)/Pods-Trickle (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		570C0A5D2C3D198ABF4D55F6 /* Pods-Trickle (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (iOS).release.xcconfig"; path = "Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		64DCDEAD1B4B1A6C06731177 /* Pods_Trickle__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trickle__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD3D5192C55B6571BF3AA5E /* Pods-Trickle (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		A03BBD772627ABF300F72FB0 /* TrickleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickleApp.swift; sourceTree = "<group>"; };
-		A03BBD782627ABF300F72FB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A03BBD792627ABF500F72FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03BBD7E2627ABF500F72FB0 /* Trickle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trickle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BBD812627ABF500F72FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BBD862627ABF500F72FB0 /* Trickle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trickle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BBD882627ABF500F72FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BBD892627ABF500F72FB0 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A03BBDA62627AD1E00F72FB0 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
+		A0C7B9752634A71100E53F29 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		A0C7B98F263A122500E53F29 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trickle__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E45CFC8ED0D1691B2E6670B /* Pods_Trickle__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88097151CDEA2A323AD11620 /* Pods_Trickle__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,15 +69,20 @@
 				A03BBD802627ABF500F72FB0 /* iOS */,
 				A03BBD872627ABF500F72FB0 /* macOS */,
 				A03BBD7F2627ABF500F72FB0 /* Products */,
+				FFA165C6599E2007AAFD7C3C /* Pods */,
+				E389496ECD4B32BC00BAB4A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		A03BBD762627ABF300F72FB0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A0C7B9752634A71100E53F29 /* Podfile */,
 				A03BBD772627ABF300F72FB0 /* TrickleApp.swift */,
-				A03BBD782627ABF300F72FB0 /* ContentView.swift */,
+				A03BBDA62627AD1E00F72FB0 /* HomeView.swift */,
+				A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */,
 				A03BBD792627ABF500F72FB0 /* Assets.xcassets */,
+				A0C7B98F263A122500E53F29 /* EditView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -90,6 +113,26 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		E389496ECD4B32BC00BAB4A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64DCDEAD1B4B1A6C06731177 /* Pods_Trickle__iOS_.framework */,
+				DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFA165C6599E2007AAFD7C3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AD3D5192C55B6571BF3AA5E /* Pods-Trickle (iOS).debug.xcconfig */,
+				570C0A5D2C3D198ABF4D55F6 /* Pods-Trickle (iOS).release.xcconfig */,
+				07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */,
+				420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A03BBD922627ABF500F72FB0 /* Build configuration list for PBXNativeTarget "Trickle (iOS)" */;
 			buildPhases = (
+				C3B7FBFB28802D2E094AA3C7 /* [CP] Check Pods Manifest.lock */,
 				A03BBD7A2627ABF500F72FB0 /* Sources */,
 				A03BBD7B2627ABF500F72FB0 /* Frameworks */,
 				A03BBD7C2627ABF500F72FB0 /* Resources */,
+				AB8EC3776CC46C59958D6AE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A03BBD952627ABF500F72FB0 /* Build configuration list for PBXNativeTarget "Trickle (macOS)" */;
 			buildPhases = (
+				C933149DFA47F5E58A3D690E /* [CP] Check Pods Manifest.lock */,
 				A03BBD822627ABF500F72FB0 /* Sources */,
 				A03BBD832627ABF500F72FB0 /* Frameworks */,
 				A03BBD842627ABF500F72FB0 /* Resources */,
@@ -168,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C7B9762634A71100E53F29 /* Podfile in Resources */,
 				A03BBD8E2627ABF500F72FB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,19 +223,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C7B9772634A71100E53F29 /* Podfile in Resources */,
 				A03BBD8F2627ABF500F72FB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB8EC3776CC46C59958D6AE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3B7FBFB28802D2E094AA3C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trickle (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C933149DFA47F5E58A3D690E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trickle (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A03BBD7A2627ABF500F72FB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03BBD8C2627ABF500F72FB0 /* ContentView.swift in Sources */,
+				A03BBDA82627AD1E00F72FB0 /* HomeView.swift in Sources */,
 				A03BBD8A2627ABF500F72FB0 /* TrickleApp.swift in Sources */,
+				A0C7B990263A122600E53F29 /* EditView.swift in Sources */,
+				A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03BBD8D2627ABF500F72FB0 /* ContentView.swift in Sources */,
+				A03BBDA92627AD1E00F72FB0 /* HomeView.swift in Sources */,
 				A03BBD8B2627ABF500F72FB0 /* TrickleApp.swift in Sources */,
+				A03BBDAB2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +432,7 @@
 		};
 		A03BBD932627ABF500F72FB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD3D5192C55B6571BF3AA5E /* Pods-Trickle (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +455,7 @@
 		};
 		A03BBD942627ABF500F72FB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 570C0A5D2C3D198ABF4D55F6 /* Pods-Trickle (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +479,7 @@
 		};
 		A03BBD962627ABF500F72FB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +504,7 @@
 		};
 		A03BBD972627ABF500F72FB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
