@@ -10,7 +10,9 @@ import BottomSheet
 
 struct CreateNewView: View {
     @State var tapped: Bool = false
+    @State var editMode: EditMode = .inactive
     private var isCreate: Bool
+    
     
     init(isCreatePage: Bool) {
         self.isCreate = isCreatePage
@@ -22,10 +24,10 @@ struct CreateNewView: View {
             
             VStack(spacing: 20) {
                 
-                
-                
                 if isCreate {
-                    TrickleModifierPageButton(type: .create)
+                    TrickleModifierPageButton(title: .create) {
+                        // Save New Trickle Data
+                    }
                     
                     VStack {
                         Text("Let's create a new")
@@ -34,6 +36,11 @@ struct CreateNewView: View {
                             .font(.system(size:44, weight: .bold))
                     }
                     .foregroundColor(Color.white)
+                } else {
+                    TrickleModifierPageButton(title: self.editMode.isEditing ? .save : .edit) {
+                        self.editMode.toggle()
+                    }
+                    
                 }
                 
                 TrickleNeumorphismStyleContainerView {
@@ -151,7 +158,14 @@ struct CreateNewView: View {
 
 struct CreateNewView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateNewView(isCreatePage: true)
+        CreateNewView(isCreatePage: false)
+    }
+}
+
+extension EditMode {
+    
+    mutating func toggle() {
+        self = self == .active ? .inactive : .active
     }
 }
 
@@ -189,23 +203,15 @@ struct TrickleModifierPageButton: View {
         var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
     }
     
-    var modifierType: TrickleModifierButtonType = .create
-    
-    init(type: TrickleModifierButtonType) {
-        self.modifierType = type
-    }
+    let title: TrickleModifierButtonType
+    let action: () -> Void
     
     var body: some View {
         HStack {
             Spacer()
-            Button {
-                print("Up")
-            } label: {
-                Text(self.modifierType.localizedName)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
-            }
-            
+            Button(title.rawValue, action: action)
+                .font(Font.body.bold())
+                .foregroundColor(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
             
         }
     }
