@@ -1,43 +1,39 @@
 //
-//  CreateNewView.swift
+//  EditView.swift
 //  Trickle (iOS)
 //
-//  Created by Myron Wells on 4/14/21.
+//  Created by Myron Wells on 4/28/21.
 //
 
 import SwiftUI
 import BottomSheet
 
-struct CreateNewView: View {
+struct EditView: View {
     @State var tapped: Bool = false
-    private var isCreate: Bool
-    
-    init(isCreatePage: Bool) {
-        self.isCreate = isCreatePage
-    }
-    
     var body: some View {
         
         ScrollView {
             
             VStack(spacing: 20) {
                 
-                
-                
-                if isCreate {
-                    TrickleModifierPageButton(type: .create)
-                    
-                    VStack {
-                        Text("Let's create a new")
-                            .font(.system(size:34, weight: .medium))
-                        Text("Trickle!")
-                            .font(.system(size:44, weight: .bold))
-                    }
-                    .foregroundColor(Color.white)
+                HStack {
+                    Spacer()
+                    Text("Create")
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
                 }
                 
+                VStack {
+                    Text("Let's create a new")
+                        .font(.system(size:34, weight: .medium))
+                    Text("Trickle!")
+                        .font(.system(size:44, weight: .bold))
+                }
+                .foregroundColor(Color.white)
+                
+                
                 TrickleNeumorphismStyleContainerView {
-                    
+                  
                     Text("I'd like to trickle my time spent on ...")
                         .font(.system(size:28, weight: .medium))
                         .multilineTextAlignment(.center)
@@ -47,7 +43,6 @@ struct CreateNewView: View {
                             .strokeBorder(Color(#colorLiteral(red: 0.8980392157, green: 0.04705882353, blue: 0.662745098, alpha: 1)),lineWidth: 7)
                             .background(Circle().foregroundColor(Color(.clear)))
                             .frame(width: 25, height: 25)
-                        
                         TextField("Priority Task", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                     }
                     .padding()
@@ -70,7 +65,7 @@ struct CreateNewView: View {
                     .padding()
                     .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                     .cornerRadius(10)
-                    
+                       
                 }
                 
                 VStack(spacing: 20) {
@@ -146,67 +141,10 @@ struct CreateNewView: View {
         }
         
     }
-    
 }
 
-struct CreateNewView_Previews: PreviewProvider {
+struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateNewView(isCreatePage: true)
-    }
-}
-
-
-protocol ContainerView: View {
-    associatedtype Content
-    init(content: @escaping () -> Content)
-}
-
-struct TrickleNeumorphismStyleContainerView<Content: View>: ContainerView {
-    
-    var content: () -> Content
-    init(@ViewBuilder content: @escaping () -> Content) {
-        self.content = content
-    }
-    var body: some View {
-        VStack(spacing: 20, content: content)
-            //.frame(maxWidth:300)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 50)
-            .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
-            .cornerRadius(30)
-            .shadow(color: Color(#colorLiteral(red: 0.262745098, green: 0.2862745098, blue: 0.831372549, alpha: 1)), radius: 10, x: 10, y: 10)
-            .shadow(color: Color(#colorLiteral(red: 0.2549019608, green: 0.2784313725, blue: 0.8431372549, alpha: 1)), radius: 10, x: -10, y: -10)
-    }
-}
-
-struct TrickleModifierPageButton: View {
-    
-    enum TrickleModifierButtonType: String, Equatable, CaseIterable {
-        case create  = "Create"
-        case edit = "Edit"
-        case save  = "Save"
-        
-        var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
-    }
-    
-    var modifierType: TrickleModifierButtonType = .create
-    
-    init(type: TrickleModifierButtonType) {
-        self.modifierType = type
-    }
-    
-    var body: some View {
-        HStack {
-            Spacer()
-            Button {
-                print("Up")
-            } label: {
-                Text(self.modifierType.localizedName)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
-            }
-            
-            
-        }
+        EditView()
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		A03BBDAB2627AD1E00F72FB0 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */; };
 		A0C7B9762634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
 		A0C7B9772634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
+		A0C7B990263A122600E53F29 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7B98F263A122500E53F29 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A03BBDA62627AD1E00F72FB0 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
 		A0C7B9752634A71100E53F29 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		A0C7B98F263A122500E53F29 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trickle__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				A03BBDA62627AD1E00F72FB0 /* HomeView.swift */,
 				A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */,
 				A03BBD792627ABF500F72FB0 /* Assets.xcassets */,
+				A0C7B98F263A122500E53F29 /* EditView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -127,7 +130,6 @@
 				07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */,
 				420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,6 +301,7 @@
 			files = (
 				A03BBDA82627AD1E00F72FB0 /* HomeView.swift in Sources */,
 				A03BBD8A2627ABF500F72FB0 /* TrickleApp.swift in Sources */,
+				A0C7B990263A122600E53F29 /* EditView.swift in Sources */,
 				A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
