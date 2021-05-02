@@ -12,14 +12,18 @@ struct CreateNewView: View {
     @State var tapped: Bool = false
     @State var editMode: EditMode = .inactive
     @State var progressValue: Float = 60 * 60 * 14 // 10 hours in seconds
+    @State var selectedBackTime = 2
+    
     private var isCreate: Bool
     
     
     init(isCreatePage: Bool) {
         self.isCreate = isCreatePage
+        
     }
     
     var body: some View {
+        
         
         ScrollView {
             
@@ -43,8 +47,39 @@ struct CreateNewView: View {
                     }
                     
                     TrickleNeumorphismStyleContainerView {
+                        
+                        HStack {
+                            Text("Your Balance")
+                                .foregroundColor(.white)
+                            Spacer()
+                            Image(systemName: "ellipsis")
+                                .foregroundColor(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
+                        }
+                        .font(.system(size:28, weight: .medium))
                         TrickleTimeStorageBar(showTimeLabel: true, value: progressValue).frame(height: 30)
-                
+                        
+                        
+                        GeometryReader { geometry in
+                            
+                            HStack {
+                                Spacer()
+                                Picker(selection: $selectedBackTime, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
+                                    Text("Deposit").tag(1)
+                                    Text("Withdraw").tag(2)
+                                }
+                                .pickerStyle(SegmentedPickerStyle())
+                                .onAppear {
+                                    UISegmentedControl.appearance().selectedSegmentTintColor = #colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)
+                                    //UISegmentedControl.appearance().set
+                                    UISegmentedControl.appearance().backgroundColor = UIColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.15))
+                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)], for: .selected)
+                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+                                }
+                                .frame(width: geometry.size.width / 2)
+                                Spacer()
+                            }
+                            
+                        }
                     }
                     
                 }
