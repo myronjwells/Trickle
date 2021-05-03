@@ -7,7 +7,7 @@
 
 import SwiftUI
 import BottomSheet
-
+    
 struct CreateNewView: View {
     @State var tapped: Bool = false
     @State var editMode: EditMode = .inactive
@@ -71,15 +71,19 @@ struct CreateNewView: View {
                                 .onAppear {
                                     UISegmentedControl.appearance().selectedSegmentTintColor = #colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)
                                     //UISegmentedControl.appearance().set
-                                    UISegmentedControl.appearance().backgroundColor = UIColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.15))
-                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)], for: .selected)
-                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+                                    UISegmentedControl.appearance().backgroundColor = UIColor(Color.black.opacity(0.08))
+                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .selected)
+                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .normal)
                                 }
                                 .frame(width: geometry.size.width / 2)
                                 Spacer()
+                            
                             }
                             
                         }
+                       
+                            
+                        
                     }
                     
                 }
@@ -195,6 +199,33 @@ struct CreateNewView: View {
         
     }
     
+}
+
+struct MultiPicker: View  {
+
+    typealias Label = String
+    typealias Entry = String
+
+    let data: [ (Label, [Entry]) ]
+    @Binding var selection: [Entry]
+
+    var body: some View {
+        GeometryReader { geometry in
+            HStack {
+                ForEach(0..<self.data.count) { column in
+                    Picker(self.data[column].0, selection: self.$selection[column]) {
+                        ForEach(0..<self.data[column].1.count) { row in
+                            Text(verbatim: self.data[column].1[row])
+                            .tag(self.data[column].1[row])
+                        }
+                    }
+                    .pickerStyle(WheelPickerStyle())
+                    .frame(width: geometry.size.width / CGFloat(self.data.count), height: geometry.size.height)
+                    .clipped()
+                }
+            }
+        }
+    }
 }
 
 struct CreateNewView_Previews: PreviewProvider {

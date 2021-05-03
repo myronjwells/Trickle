@@ -8,24 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7E45CFC8ED0D1691B2E6670B /* Pods_Trickle__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DCDEAD1B4B1A6C06731177 /* Pods_Trickle__iOS_.framework */; };
-		88097151CDEA2A323AD11620 /* Pods_Trickle__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */; };
 		A03BBD8A2627ABF500F72FB0 /* TrickleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBD772627ABF300F72FB0 /* TrickleApp.swift */; };
-		A03BBD8B2627ABF500F72FB0 /* TrickleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBD772627ABF300F72FB0 /* TrickleApp.swift */; };
 		A03BBD8E2627ABF500F72FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BBD792627ABF500F72FB0 /* Assets.xcassets */; };
-		A03BBD8F2627ABF500F72FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BBD792627ABF500F72FB0 /* Assets.xcassets */; };
 		A03BBDA82627AD1E00F72FB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA62627AD1E00F72FB0 /* HomeView.swift */; };
-		A03BBDA92627AD1E00F72FB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA62627AD1E00F72FB0 /* HomeView.swift */; };
 		A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */; };
-		A03BBDAB2627AD1E00F72FB0 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */; };
 		A0C7B9762634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
-		A0C7B9772634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
 		A0C7B990263A122600E53F29 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7B98F263A122500E53F29 /* EditView.swift */; };
 		A0C7B998263F0C5C00E53F29 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7B997263F0C5C00E53F29 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Trickle (macOS)/Pods-Trickle (macOS).debug.xcconfig"; sourceTree = "<group>"; };
-		420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (macOS).release.xcconfig"; path = "Target Support Files/Pods-Trickle (macOS)/Pods-Trickle (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		570C0A5D2C3D198ABF4D55F6 /* Pods-Trickle (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (iOS).release.xcconfig"; path = "Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		64DCDEAD1B4B1A6C06731177 /* Pods_Trickle__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trickle__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD3D5192C55B6571BF3AA5E /* Pods-Trickle (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trickle (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Trickle (iOS)/Pods-Trickle (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,15 +25,11 @@
 		A03BBD792627ABF500F72FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03BBD7E2627ABF500F72FB0 /* Trickle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trickle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BBD812627ABF500F72FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A03BBD862627ABF500F72FB0 /* Trickle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trickle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03BBD882627ABF500F72FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A03BBD892627ABF500F72FB0 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		A03BBDA62627AD1E00F72FB0 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
 		A0C7B9752634A71100E53F29 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		A0C7B98F263A122500E53F29 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		A0C7B997263F0C5C00E53F29 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trickle__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +41,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A03BBD832627ABF500F72FB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88097151CDEA2A323AD11620 /* Pods_Trickle__macOS_.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,7 +49,6 @@
 			children = (
 				A03BBD762627ABF300F72FB0 /* Shared */,
 				A03BBD802627ABF500F72FB0 /* iOS */,
-				A03BBD872627ABF500F72FB0 /* macOS */,
 				A03BBD7F2627ABF500F72FB0 /* Products */,
 				FFA165C6599E2007AAFD7C3C /* Pods */,
 				E389496ECD4B32BC00BAB4A6 /* Frameworks */,
@@ -94,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				A03BBD7E2627ABF500F72FB0 /* Trickle.app */,
-				A03BBD862627ABF500F72FB0 /* Trickle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,20 +85,10 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		A03BBD872627ABF500F72FB0 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				A03BBD882627ABF500F72FB0 /* Info.plist */,
-				A03BBD892627ABF500F72FB0 /* macOS.entitlements */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
 		E389496ECD4B32BC00BAB4A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				64DCDEAD1B4B1A6C06731177 /* Pods_Trickle__iOS_.framework */,
-				DC758FBC64EB0ED076FD42DB /* Pods_Trickle__macOS_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,8 +98,6 @@
 			children = (
 				8AD3D5192C55B6571BF3AA5E /* Pods-Trickle (iOS).debug.xcconfig */,
 				570C0A5D2C3D198ABF4D55F6 /* Pods-Trickle (iOS).release.xcconfig */,
-				07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */,
-				420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,24 +124,6 @@
 			productReference = A03BBD7E2627ABF500F72FB0 /* Trickle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A03BBD852627ABF500F72FB0 /* Trickle (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A03BBD952627ABF500F72FB0 /* Build configuration list for PBXNativeTarget "Trickle (macOS)" */;
-			buildPhases = (
-				C933149DFA47F5E58A3D690E /* [CP] Check Pods Manifest.lock */,
-				A03BBD822627ABF500F72FB0 /* Sources */,
-				A03BBD832627ABF500F72FB0 /* Frameworks */,
-				A03BBD842627ABF500F72FB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Trickle (macOS)";
-			productName = "Trickle (macOS)";
-			productReference = A03BBD862627ABF500F72FB0 /* Trickle.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,9 +134,6 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					A03BBD7D2627ABF500F72FB0 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					A03BBD852627ABF500F72FB0 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -207,7 +152,6 @@
 			projectRoot = "";
 			targets = (
 				A03BBD7D2627ABF500F72FB0 /* Trickle (iOS) */,
-				A03BBD852627ABF500F72FB0 /* Trickle (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -219,15 +163,6 @@
 			files = (
 				A0C7B9762634A71100E53F29 /* Podfile in Resources */,
 				A03BBD8E2627ABF500F72FB0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A03BBD842627ABF500F72FB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0C7B9772634A71100E53F29 /* Podfile in Resources */,
-				A03BBD8F2627ABF500F72FB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,28 +208,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C933149DFA47F5E58A3D690E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Trickle (macOS)-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,16 +220,6 @@
 				A0C7B998263F0C5C00E53F29 /* Test.swift in Sources */,
 				A0C7B990263A122600E53F29 /* EditView.swift in Sources */,
 				A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A03BBD822627ABF500F72FB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A03BBDA92627AD1E00F72FB0 /* HomeView.swift in Sources */,
-				A03BBD8B2627ABF500F72FB0 /* TrickleApp.swift in Sources */,
-				A03BBDAB2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,56 +384,6 @@
 			};
 			name = Release;
 		};
-		A03BBD962627ABF500F72FB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07FFCEF19615BF6B4AE01886 /* Pods-Trickle (macOS).debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3N2D795X6A;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mwells.Trickle.Trickle;
-				PRODUCT_NAME = Trickle;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		A03BBD972627ABF500F72FB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 420FB1D67A6A0EB424B4EA0E /* Pods-Trickle (macOS).release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3N2D795X6A;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mwells.Trickle.Trickle;
-				PRODUCT_NAME = Trickle;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,15 +401,6 @@
 			buildConfigurations = (
 				A03BBD932627ABF500F72FB0 /* Debug */,
 				A03BBD942627ABF500F72FB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A03BBD952627ABF500F72FB0 /* Build configuration list for PBXNativeTarget "Trickle (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A03BBD962627ABF500F72FB0 /* Debug */,
-				A03BBD972627ABF500F72FB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
