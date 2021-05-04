@@ -15,6 +15,7 @@
 		A0C7B9762634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
 		A0C7B990263A122600E53F29 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7B98F263A122500E53F29 /* EditView.swift */; };
 		A0C7B998263F0C5C00E53F29 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7B997263F0C5C00E53F29 /* Test.swift */; };
+		A0F2599D26419AC300D4FE56 /* TimeSelectionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2599C26419AC300D4FE56 /* TimeSelectionPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A0C7B9752634A71100E53F29 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		A0C7B98F263A122500E53F29 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		A0C7B997263F0C5C00E53F29 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		A0F2599C26419AC300D4FE56 /* TimeSelectionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				A03BBD792627ABF500F72FB0 /* Assets.xcassets */,
 				A0C7B98F263A122500E53F29 /* EditView.swift */,
 				A0C7B997263F0C5C00E53F29 /* Test.swift */,
+				A0F2599C26419AC300D4FE56 /* TimeSelectionPicker.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				A03BBDA82627AD1E00F72FB0 /* HomeView.swift in Sources */,
 				A03BBD8A2627ABF500F72FB0 /* TrickleApp.swift in Sources */,
 				A0C7B998263F0C5C00E53F29 /* Test.swift in Sources */,
+				A0F2599D26419AC300D4FE56 /* TimeSelectionPicker.swift in Sources */,
 				A0C7B990263A122600E53F29 /* EditView.swift in Sources */,
 				A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,
 			);

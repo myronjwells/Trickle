@@ -29,6 +29,8 @@ struct CreateNewView: View {
             
             VStack(spacing: 20) {
                 
+                
+                
                 if isCreate {
                     TrickleModifierPageButton(title: .create) {
                         // Save New Trickle Data
@@ -81,7 +83,17 @@ struct CreateNewView: View {
                             }
                             
                         }
-                       
+                        
+                        
+                        
+                        TimeSelectionPicker()
+                        // TAKE A LOOK AT THE LINK BELOW IT MIGHT HELP UNDERSTAND HOW TO FIX THE SCALING ISSUE OF YOUR PICKERVIEW WHEN ADDING TO OTHER VIEWS. TRYING TO SEE IF I SHOULD PASS DOWN THE FRAME FROM THE PARENT VIEW(CREATENEWVIEW) TO THE CHILD(TIMESELECTIONPICKER)
+                        
+                        //https://swiftui-lab.com/communicating-with-the-view-tree-part-1/
+//                        TrickleNeumorphismStyleContainerView {
+//                            TimeSelectionPicker()
+//                        }
+                        
                             
                         
                     }
@@ -250,14 +262,29 @@ protocol ContainerView: View {
 struct TrickleNeumorphismStyleContainerView<Content: View>: ContainerView {
     
     var content: () -> Content
+    let spacing: CGFloat
+    let horizontalPadding: CGFloat
+    let verticalPadding: CGFloat
+    
+    
+    init(spacing: CGFloat = 20, horizontalPadding: CGFloat = 20, verticalPadding: CGFloat = 50, @ViewBuilder content: @escaping () -> Content) {
+        self.spacing = spacing
+        self.content = content
+        self.horizontalPadding = horizontalPadding
+        self.verticalPadding = verticalPadding
+    }
+    
     init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content
+        self.spacing = 20
+        self.horizontalPadding = 20
+        self.verticalPadding = 50
     }
     var body: some View {
-        VStack(spacing: 20, content: content)
+        VStack(spacing: spacing, content: content)
             //.frame(maxWidth:300)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 50)
+            .padding(.horizontal, horizontalPadding)
+            .padding(.vertical, verticalPadding)
             .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
             .cornerRadius(30)
             .shadow(color: Color(#colorLiteral(red: 0.262745098, green: 0.2862745098, blue: 0.831372549, alpha: 1)), radius: 10, x: 10, y: 10)
