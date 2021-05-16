@@ -48,7 +48,7 @@ struct CreateNewView: View {
                         self.editMode.toggle()
                     }
                     
-                    TrickleNeumorphismStyleContainerView {
+                    TrickleNeumorphismStyleContainerView(verticalPadding: 20) {
                         
                         HStack {
                             Text("Your Balance")
@@ -61,7 +61,7 @@ struct CreateNewView: View {
                         TrickleTimeStorageBar(showTimeLabel: true, value: progressValue).frame(height: 30)
                         
                         
-                        GeometryReader { geometry in
+                        
                             
                             HStack {
                                 Spacer()
@@ -72,29 +72,38 @@ struct CreateNewView: View {
                                 .pickerStyle(SegmentedPickerStyle())
                                 .onAppear {
                                     UISegmentedControl.appearance().selectedSegmentTintColor = #colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)
-                                    //UISegmentedControl.appearance().set
                                     UISegmentedControl.appearance().backgroundColor = UIColor(Color.black.opacity(0.08))
                                     UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .selected)
                                     UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .normal)
                                 }
-                                .frame(width: geometry.size.width / 2)
+                                .frame(maxWidth: 200)
                                 Spacer()
                             
-                            }
+                            
+                           
                             
                         }
                         
                         
                         
-                        TimeSelectionPicker()
-                        // TAKE A LOOK AT THE LINK BELOW IT MIGHT HELP UNDERSTAND HOW TO FIX THE SCALING ISSUE OF YOUR PICKERVIEW WHEN ADDING TO OTHER VIEWS. TRYING TO SEE IF I SHOULD PASS DOWN THE FRAME FROM THE PARENT VIEW(CREATENEWVIEW) TO THE CHILD(TIMESELECTIONPICKER)
+                        Text("Amount of Time")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .padding(.top, 20)
+                            
+                            SwiftUIView(fontColor: Color.pickerFontColorMode.light, fontSize: 25)
+                                .padding(.horizontal, 20)
+                                .frame(height: 100)
                         
-                        //https://swiftui-lab.com/communicating-with-the-view-tree-part-1/
-//                        TrickleNeumorphismStyleContainerView {
-//                            TimeSelectionPicker()
-//                        }
                         
                             
+                            Circle()
+                                .fill(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
+                                .frame(width: 50, height: 50)
+                                
+                              
+            
+            
                         
                     }
                     
@@ -259,19 +268,49 @@ protocol ContainerView: View {
     init(content: @escaping () -> Content)
 }
 
+
+struct TrickleNeumorphismStyle: ViewModifier {
+
+    let spacing: CGFloat? = 20
+    let horizontalPadding: CGFloat? = 20
+    let verticalPadding: CGFloat? = 50
+    let cornerRadius: CGFloat? = 30
+
+    func body(content: Content) -> some View {
+        ZStack(alignment: .bottomTrailing) {
+            content
+                .padding(.horizontal, horizontalPadding)
+                .padding(.vertical, verticalPadding)
+                .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
+                .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .shadow(color: Color(#colorLiteral(red: 0.262745098, green: 0.2862745098, blue: 0.831372549, alpha: 1)), radius: 10, x: 10, y: 10)
+                .shadow(color: Color(#colorLiteral(red: 0.2549019608, green: 0.2784313725, blue: 0.8431372549, alpha: 1)), radius: 10, x: -10, y: -10)
+            
+        }
+    }
+}
+
+extension View {
+    func trickleNeumorphismStyle() -> some View {
+        self.modifier(TrickleNeumorphismStyle())
+    }
+}
+
 struct TrickleNeumorphismStyleContainerView<Content: View>: ContainerView {
     
     var content: () -> Content
     let spacing: CGFloat
     let horizontalPadding: CGFloat
     let verticalPadding: CGFloat
+    let cornerRadius: CGFloat
     
     
-    init(spacing: CGFloat = 20, horizontalPadding: CGFloat = 20, verticalPadding: CGFloat = 50, @ViewBuilder content: @escaping () -> Content) {
+    init(spacing: CGFloat = 20, horizontalPadding: CGFloat = 20, verticalPadding: CGFloat = 50, cornerRadius: CGFloat = 30, @ViewBuilder content: @escaping () -> Content) {
         self.spacing = spacing
         self.content = content
         self.horizontalPadding = horizontalPadding
         self.verticalPadding = verticalPadding
+        self.cornerRadius = cornerRadius
     }
     
     init(@ViewBuilder content: @escaping () -> Content) {
@@ -279,16 +318,18 @@ struct TrickleNeumorphismStyleContainerView<Content: View>: ContainerView {
         self.spacing = 20
         self.horizontalPadding = 20
         self.verticalPadding = 50
+        self.cornerRadius = 30
     }
     var body: some View {
-        VStack(spacing: spacing, content: content)
-            //.frame(maxWidth:300)
+        VStack(spacing: spacing,content: content)
+            .compositingGroup()
             .padding(.horizontal, horizontalPadding)
             .padding(.vertical, verticalPadding)
             .background(Color(#colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)))
-            .cornerRadius(30)
+            .mask(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
             .shadow(color: Color(#colorLiteral(red: 0.262745098, green: 0.2862745098, blue: 0.831372549, alpha: 1)), radius: 10, x: 10, y: 10)
             .shadow(color: Color(#colorLiteral(red: 0.2549019608, green: 0.2784313725, blue: 0.8431372549, alpha: 1)), radius: 10, x: -10, y: -10)
+        
     }
 }
 

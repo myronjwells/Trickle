@@ -23,7 +23,7 @@ struct TimeSelectionPicker: View {
                         /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
                         Text("3").tag(3)
                     }
-                    .frame(width: geometry.size.width/6, height: 100)
+                    .frame(width: geometry.size.width/6, height: geometry.size.height)
                     .background(Color.pink)
                     .clipped()
                     
@@ -38,7 +38,7 @@ struct TimeSelectionPicker: View {
                         Text("1").tag(3)
                         Text("2").tag(4)
                     }
-                    .frame(width: geometry.size.width/6, height: 100)
+                    .frame(width: geometry.size.width/6, height: geometry.size.height)
                     .background(Color.green)
                     .clipped()
                     
@@ -54,7 +54,7 @@ struct TimeSelectionPicker: View {
                         Text("1").tag(5)
                         Text("2").tag(6)
                     }
-                    .frame(width: geometry.size.width/6, height: 100)
+                    .frame(width: geometry.size.width/6, height: geometry.size.height)
                     .background(Color.blue)
                     .clipped()
                     
@@ -63,6 +63,7 @@ struct TimeSelectionPicker: View {
                 
                 Spacer()
             }
+            .frame(height: geometry.size.height)
             .background(Color.gray)
         
         }
