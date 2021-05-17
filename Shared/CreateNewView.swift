@@ -7,7 +7,7 @@
 
 import SwiftUI
 import BottomSheet
-    
+
 struct CreateNewView: View {
     @State var tapped: Bool = false
     @State var editMode: EditMode = .inactive
@@ -62,25 +62,25 @@ struct CreateNewView: View {
                         
                         
                         
+                        
+                        HStack {
+                            Spacer()
+                            Picker(selection: $selectedBackTime, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
+                                Text("Deposit").tag(1)
+                                Text("Withdraw").tag(2)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+                            .onAppear {
+                                UISegmentedControl.appearance().selectedSegmentTintColor = #colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)
+                                UISegmentedControl.appearance().backgroundColor = UIColor(Color.black.opacity(0.08))
+                                UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .selected)
+                                UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .normal)
+                            }
+                            .frame(maxWidth: 200)
+                            Spacer()
                             
-                            HStack {
-                                Spacer()
-                                Picker(selection: $selectedBackTime, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-                                    Text("Deposit").tag(1)
-                                    Text("Withdraw").tag(2)
-                                }
-                                .pickerStyle(SegmentedPickerStyle())
-                                .onAppear {
-                                    UISegmentedControl.appearance().selectedSegmentTintColor = #colorLiteral(red: 0.3058823529, green: 0.3294117647, blue: 0.8784313725, alpha: 1)
-                                    UISegmentedControl.appearance().backgroundColor = UIColor(Color.black.opacity(0.08))
-                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .selected)
-                                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white, .font : UIFont.preferredFont(forTextStyle: .body)], for: .normal)
-                                }
-                                .frame(maxWidth: 200)
-                                Spacer()
                             
                             
-                           
                             
                         }
                         
@@ -90,20 +90,15 @@ struct CreateNewView: View {
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(.top, 20)
-                            
-                            SwiftUIView(fontColor: Color.pickerFontColorMode.light, fontSize: 25)
-                                .padding(.horizontal, 20)
-                                .frame(height: 100)
                         
                         
-                            
-                            Circle()
-                                .fill(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
-                                .frame(width: 50, height: 50)
-                                
-                              
-            
-            
+                        SwiftUIView(fontColor: Color.pickerFontColorMode.light, fontSize: 25)
+                            .padding(.horizontal, 20)
+                            .frame(height: 100)
+                        
+                        Circle()
+                            .fill(Color(#colorLiteral(red: 1, green: 0.8039215686, blue: 0.6941176471, alpha: 1)))
+                            .frame(width: 50, height: 50)
                         
                     }
                     
@@ -223,13 +218,13 @@ struct CreateNewView: View {
 }
 
 struct MultiPicker: View  {
-
+    
     typealias Label = String
     typealias Entry = String
-
+    
     let data: [ (Label, [Entry]) ]
     @Binding var selection: [Entry]
-
+    
     var body: some View {
         GeometryReader { geometry in
             HStack {
@@ -237,7 +232,7 @@ struct MultiPicker: View  {
                     Picker(self.data[column].0, selection: self.$selection[column]) {
                         ForEach(0..<self.data[column].1.count) { row in
                             Text(verbatim: self.data[column].1[row])
-                            .tag(self.data[column].1[row])
+                                .tag(self.data[column].1[row])
                         }
                     }
                     .pickerStyle(WheelPickerStyle())
@@ -270,12 +265,12 @@ protocol ContainerView: View {
 
 
 struct TrickleNeumorphismStyle: ViewModifier {
-
+    
     let spacing: CGFloat? = 20
     let horizontalPadding: CGFloat? = 20
     let verticalPadding: CGFloat? = 50
     let cornerRadius: CGFloat? = 30
-
+    
     func body(content: Content) -> some View {
         ZStack(alignment: .bottomTrailing) {
             content

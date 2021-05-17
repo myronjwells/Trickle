@@ -21,7 +21,9 @@ struct SwiftUIView: View {
     @State private var selection = 0
     @State private var selection2 = 0
     @State private var selection3 = 0
-    let numbers = [Int](0...10)
+    let hours = [Int](0...24)
+    let minutes = [Int](0...59)
+    let seconds = [Int](0...59)
     
     var fontColor: Color
     var fontSize: CGFloat
@@ -43,56 +45,57 @@ struct SwiftUIView: View {
                         //Spacer()
                         
                         
-                            Picker("Number", selection: $selection) {
-                                ForEach(0..<numbers.count) { index in
-                                    Text("\(self.numbers[index])")
-                                        .font(.system(size: fontSize, weight: .bold))
-                                        .foregroundColor(fontColor)
-                                }
+                        Picker("Hours", selection: $selection) {
+                            ForEach(0..<hours.count) { index in
+                                
+                                Text(String(format: "%02d", self.hours[index]))
+                                    .font(.system(size: fontSize, weight: .bold))
+                                    .foregroundColor(fontColor)
                             }
-                            
-                            //.labelsHidden()
-                            .frame(width: geometry.size.width/4, height: 60)
-                            .clipped()
-                            
-                
+                        }
+                        
+                        
+                        .frame(width: geometry.size.width/4, height: 60)
+                        .clipped()
+                        
+                        
                         Text(":")
-                           // .frame(width: geometry.size.width/6)
+                            // .frame(width: geometry.size.width/6)
                             .font(.system(size: fontSize, weight: .bold))
                             .foregroundColor(fontColor)
                         
                         
-                       
-                            Picker("Number", selection: $selection2) {
-                                ForEach(0..<numbers.count) { index in
-                                    Text("\(self.numbers[index])")
-                                        .font(.system(size: fontSize, weight: .bold))
-                                        .foregroundColor(fontColor)
-                                }
+                        
+                        Picker("Minutes", selection: $selection2) {
+                            ForEach(0..<minutes.count) { index in
+                                Text(String(format: "%02d", self.minutes[index]))
+                                    .font(.system(size: fontSize, weight: .bold))
+                                    .foregroundColor(fontColor)
                             }
-                            .labelsHidden()
-                            .frame(width: geometry.size.width/4, height: 60)
-                            .clipped()
-                            
-                           
+                        }
+                        .labelsHidden()
+                        .frame(width: geometry.size.width/4, height: 60)
+                        .clipped()
+                        
+                        
                         Text(":")
                             //.frame(width: geometry.size.width/6)
                             .font(.system(size: fontSize, weight: .bold))
                             .foregroundColor(fontColor)
                         
                         
-                       
-                            Picker("Number", selection: $selection3) {
-                                ForEach(0..<numbers.count) { index in
-                                    Text("\(self.numbers[index])")
-                                        .font(.system(size: fontSize, weight: .bold))
-                                        .foregroundColor(fontColor)
-                                }
+                        
+                        Picker("Seconds", selection: $selection3) {
+                            ForEach(0..<seconds.count) { index in
+                                Text(String(format: "%02d", self.seconds[index]))
+                                    .font(.system(size: fontSize, weight: .bold))
+                                    .foregroundColor(fontColor)
                             }
-                            .labelsHidden()
-                            .frame(width: geometry.size.width/4, height: 60)
-                            .clipped()
-                            
+                        }
+                        .labelsHidden()
+                        .frame(width: geometry.size.width/4, height: 60)
+                        .clipped()
+                        
                         
                         //Spacer()
                     }
@@ -116,9 +119,9 @@ struct SwiftUIView: View {
                         .font(.system(size: 13)).fontWeight(.bold)
                         .foregroundColor(fontColor)
                         .frame(width:geometry.size.width/3.5)
-                   
+                    
                 }
-            
+                
             }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
             //.background(Color.yellow)
