@@ -40,7 +40,7 @@ struct SwiftUIView: View {
                 
                 TrickleNeumorphismStyleContainerView(horizontalPadding: 0,verticalPadding: 0, cornerRadius: 15)  {
                     HStack {
-                        Spacer()
+                        //Spacer()
                         
                         
                             Picker("Number", selection: $selection) {
@@ -52,12 +52,12 @@ struct SwiftUIView: View {
                             }
                             
                             //.labelsHidden()
-                            .frame(width: geometry.size.width/6, height: 60)
+                            .frame(width: geometry.size.width/4, height: 60)
                             .clipped()
                             
                 
                         Text(":")
-                            .frame(width: geometry.size.width/6)
+                           // .frame(width: geometry.size.width/6)
                             .font(.system(size: fontSize, weight: .bold))
                             .foregroundColor(fontColor)
                         
@@ -71,12 +71,12 @@ struct SwiftUIView: View {
                                 }
                             }
                             .labelsHidden()
-                            .frame(width: geometry.size.width/6, height: 60)
+                            .frame(width: geometry.size.width/4, height: 60)
                             .clipped()
                             
                            
                         Text(":")
-                            .frame(width: geometry.size.width/6)
+                            //.frame(width: geometry.size.width/6)
                             .font(.system(size: fontSize, weight: .bold))
                             .foregroundColor(fontColor)
                         
@@ -90,39 +90,37 @@ struct SwiftUIView: View {
                                 }
                             }
                             .labelsHidden()
-                            .frame(width: geometry.size.width/6, height: 60)
+                            .frame(width: geometry.size.width/4, height: 60)
                             .clipped()
                             
                         
-                        Spacer()
+                        //Spacer()
                     }
+                    
                 }
                 
                 HStack {
                     Text("hours")
-                        .font(.system(size: geometry.size.width < 305 ? 9: 12)).fontWeight(.bold)
+                        .font(.system(size: 13)).fontWeight(.bold)
                         .foregroundColor(fontColor)
-                        .frame(width:geometry.size.width/6)
-                    Text("")
-                        .frame(width:geometry.size.width/6)
+                        .frame(width:geometry.size.width/3.5)
                     
                     Text("minutes")
-                        .font(.system(size: geometry.size.width < 305 ? 9: 12)).fontWeight(.bold)
+                        .font(.system(size: 13)).fontWeight(.bold)
                         .foregroundColor(fontColor)
-                        .frame(width:geometry.size.width/6)
+                        .frame(width:geometry.size.width/3.5)
                     
-                    Text("")
-                        .frame(width:geometry.size.width/6)
+                    
                     
                     Text("seconds")
-                        .font(.system(size: geometry.size.width < 305 ? 9: 12)).fontWeight(.bold)
+                        .font(.system(size: 13)).fontWeight(.bold)
                         .foregroundColor(fontColor)
-                        .frame(width:geometry.size.width/6)
+                        .frame(width:geometry.size.width/3.5)
                    
                 }
             
             }
-            
+            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
             //.background(Color.yellow)
             
         }
