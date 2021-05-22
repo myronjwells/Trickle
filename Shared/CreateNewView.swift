@@ -92,7 +92,7 @@ struct CreateNewView: View {
                             .padding(.top, 20)
                         
                         
-                        SwiftUIView(fontColor: Color.pickerFontColorMode.light, fontSize: 25)
+                        TimeSelectionPicker(fontColor: Color.pickerFontColorMode.light, fontSize: 25)
                             .padding(.horizontal, 20)
                             .frame(height: 100)
                         
