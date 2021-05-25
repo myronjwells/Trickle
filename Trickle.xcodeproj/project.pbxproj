@@ -14,6 +14,7 @@
 		A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */; };
 		A0C7B9762634A71100E53F29 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0C7B9752634A71100E53F29 /* Podfile */; };
 		A0EC23C12658A37A004D64BE /* BalanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EC23C02658A37A004D64BE /* BalanceDetailView.swift */; };
+		A0EC23C4265D5439004D64BE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EC23C3265D5439004D64BE /* CalendarView.swift */; };
 		A0F259A1265183A700D4FE56 /* TimeSelectionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F259A0265183A700D4FE56 /* TimeSelectionPicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		A03BBDA72627AD1E00F72FB0 /* CreateNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewView.swift; sourceTree = "<group>"; };
 		A0C7B9752634A71100E53F29 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		A0EC23C02658A37A004D64BE /* BalanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDetailView.swift; sourceTree = "<group>"; };
+		A0EC23C3265D5439004D64BE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		A0F259A0265183A700D4FE56 /* TimeSelectionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +49,7 @@
 		A03BBD712627ABF300F72FB0 = {
 			isa = PBXGroup;
 			children = (
+				A0EC23C3265D5439004D64BE /* CalendarView.swift */,
 				A03BBD762627ABF300F72FB0 /* Shared */,
 				A03BBD802627ABF500F72FB0 /* iOS */,
 				A03BBD7F2627ABF500F72FB0 /* Products */,
@@ -120,6 +123,8 @@
 			dependencies = (
 			);
 			name = "Trickle (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "Trickle (iOS)";
 			productReference = A03BBD7E2627ABF500F72FB0 /* Trickle.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,8 @@
 				Base,
 			);
 			mainGroup = A03BBD712627ABF300F72FB0;
+			packageReferences = (
+			);
 			productRefGroup = A03BBD7F2627ABF500F72FB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,6 +224,7 @@
 			files = (
 				A03BBDA82627AD1E00F72FB0 /* HomeView.swift in Sources */,
 				A0F259A1265183A700D4FE56 /* TimeSelectionPicker.swift in Sources */,
+				A0EC23C4265D5439004D64BE /* CalendarView.swift in Sources */,
 				A0EC23C12658A37A004D64BE /* BalanceDetailView.swift in Sources */,
 				A03BBD8A2627ABF500F72FB0 /* TrickleApp.swift in Sources */,
 				A03BBDAA2627AD1E00F72FB0 /* CreateNewView.swift in Sources */,

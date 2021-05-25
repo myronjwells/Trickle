@@ -11,7 +11,8 @@ import SwiftUI
 struct TrickleApp: App {
     var body: some Scene {
         WindowGroup {
-            CreateNewView(isCreatePage: false)
+            //CreateNewView(isCreatePage: false)
+            RootView()
         }
     }
 }
